@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이수화학</title>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <!-- flatpickr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="isu">
+      <div id="header"></div>
+      <div class="isu-stage">
+        <!-- <div
+          class="isu-area isu-area--alert01 isu-area--alert02 isu-area--alert03 isu-area--alert04-01 isu-area--alert04-02 isu-area--alert05 isu-area--alert06 isu-area--alert07 isu-area--alert08"
+        > -->
+        <div
+          class="isu-area isu-area--alert01 isu-area--alert03 isu-area--alert04-01 isu-area--alert05 isu-area--alert07"
+        >
+          <!-- <div class="isu-area"> -->
+          <div class="isu-area-map"></div>
+          <div class="isu-area-area01"></div>
+          <div class="isu-area-area02"></div>
+          <div class="isu-area-area03"></div>
+          <div class="isu-area-area04"></div>
+          <div class="isu-area-area05"></div>
+          <div class="isu-area-area06"></div>
+          <div class="isu-area-area07"></div>
+          <div class="isu-area-area08"></div>
+          <div class="isu-area-section01">
+            <div class="isu-area-section__title">다단형 MGS</div>
+            <div class="isu-area-section__body">
+              <div class="isu-area-section__table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>온도</th>
+                      <td><strong style="color: #2290f3">30</strong> °C</td>
+                    </tr>
+                    <tr>
+                      <th>습도</th>
+                      <td><strong style="color: #2290f3">220</strong> %</td>
+                    </tr>
+                    <tr>
+                      <th>CO2</th>
+                      <td><strong style="color: #2290f3">220</strong> ppm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="isu-area-section02">
+            <div class="isu-area-section__title">실내 육묘대</div>
+            <div class="isu-area-section__body">
+              <div class="isu-area-section__table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>온도</th>
+                      <td><strong style="color: #4eb2e1">30</strong> °C</td>
+                    </tr>
+                    <tr>
+                      <th>습도</th>
+                      <td><strong style="color: #4eb2e1">220</strong> %</td>
+                    </tr>
+                    <tr>
+                      <th>CO2</th>
+                      <td><strong style="color: #4eb2e1">220</strong> ppm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="isu-area-section03">
+            <div class="isu-area-section__title">발아실</div>
+            <div class="isu-area-section__body">
+              <div class="isu-area-section__table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>온도</th>
+                      <td><strong style="color: #1d9cc2">30</strong> °C</td>
+                    </tr>
+                    <tr>
+                      <th>습도</th>
+                      <td><strong style="color: #1d9cc2">220</strong> %</td>
+                    </tr>
+                    <tr>
+                      <th>CO2</th>
+                      <td><strong style="color: #1d9cc2">220</strong> ppm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="isu-area-section04-01">
+            <div class="isu-area-section__title">양액 1 - 육묘실</div>
+            <div class="isu-area-section__body">
+              <div class="isu-area-section__text">
+                <strong>공급탱크</strong>
+                <p>(3ton)</p>
+              </div>
+              <div class="isu-area-section__table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>Ec</th>
+                      <td><strong style="color: #5f77f4">0.9</strong></td>
+                    </tr>
+                    <tr>
+                      <th>pH</th>
+                      <td><strong style="color: #5f77f4">5.3</strong></td>
+                    </tr>
+                    <tr>
+                      <th>수위</th>
+                      <td><strong style="color: #5f77f4">100</strong></td>
+                    </tr>
+                    <tr>
+                      <th>수온</th>
+                      <td><strong style="color: #5f77f4">30</strong> °C</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="isu-area-section04-02">
+            <div class="isu-area-section__title">양액 2 - 다단형 MGS</div>
+            <div class="isu-area-section__body">
+              <div class="isu-area-section__text">
+                <strong>공급탱크</strong>
+                <p>(3ton)</p>
+              </div>
+              <div class="isu-area-section__table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>Ec</th>
+                      <td><strong style="color: #5f77f4">0.9</strong></td>
+                    </tr>
+                    <tr>
+                      <th>pH</th>
+                      <td><strong style="color: #5f77f4">5.3</strong></td>
+                    </tr>
+                    <tr>
+                      <th>수위</th>
+                      <td><strong style="color: #5f77f4">100</strong></td>
+                    </tr>
+                    <tr>
+                      <th>수온</th>
+                      <td><strong style="color: #5f77f4">30</strong> °C</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="isu-area-section05">
+            <div class="isu-area-section__title02">R&D 1</div>
+            <div class="isu-area-section__body02">
+              <div class="isu-area-section__info">
+                <dl>
+                  <dt>공급탱크(3ton)</dt>
+                  <dd>
+                    <span><strong style="color: #9a5af1">50</strong> pH</span>
+                    <p>EC 0.9 ㎲/cm</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="isu-area-section__info">
+                <dl>
+                  <dt>배액통</dt>
+                  <dd>
+                    <span><strong style="color: #9a5af1">50</strong> pH</span>
+                    <p>EC 0.9 ㎲/cm</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="isu-area-section__table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>온도</th>
+                      <td><strong style="color: #9a5af1">30</strong> °C</td>
+                    </tr>
+                    <tr>
+                      <th>습도</th>
+                      <td><strong style="color: #9a5af1">220</strong> %</td>
+                    </tr>
+                    <tr>
+                      <th>CO2</th>
+                      <td><strong style="color: #9a5af1">220</strong> ppm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="isu-area-section06">
+            <div class="isu-area-section__title02">R&D 2</div>
+            <div class="isu-area-section__body02">
+              <div class="isu-area-section__info">
+                <dl>
+                  <dt>공급탱크(3ton)</dt>
+                  <dd>
+                    <span><strong style="color: #9a5af1">50</strong> pH</span>
+                    <p>EC 0.9 ㎲/cm</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="isu-area-section__info">
+                <dl>
+                  <dt>배액통</dt>
+                  <dd>
+                    <span><strong style="color: #9a5af1">50</strong> pH</span>
+                    <p>EC 0.9 ㎲/cm</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="isu-area-section__table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>온도</th>
+                      <td><strong style="color: #9a5af1">30</strong> °C</td>
+                    </tr>
+                    <tr>
+                      <th>습도</th>
+                      <td><strong style="color: #9a5af1">220</strong> %</td>
+                    </tr>
+                    <tr>
+                      <th>CO2</th>
+                      <td><strong style="color: #9a5af1">220</strong> ppm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="isu-area-section07">
+            <div class="isu-area-section__title02">R&D 3</div>
+            <div class="isu-area-section__body02">
+              <div class="isu-area-section__info">
+                <dl>
+                  <dt>공급탱크(3ton)</dt>
+                  <dd>
+                    <span><strong style="color: #9a5af1">50</strong> pH</span>
+                    <p>EC 0.9 ㎲/cm</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="isu-area-section__info">
+                <dl>
+                  <dt>배액통</dt>
+                  <dd>
+                    <span><strong style="color: #9a5af1">50</strong> pH</span>
+                    <p>EC 0.9 ㎲/cm</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="isu-area-section__table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>온도</th>
+                      <td><strong style="color: #9a5af1">30</strong> °C</td>
+                    </tr>
+                    <tr>
+                      <th>습도</th>
+                      <td><strong style="color: #9a5af1">220</strong> %</td>
+                    </tr>
+                    <tr>
+                      <th>CO2</th>
+                      <td><strong style="color: #9a5af1">220</strong> ppm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="isu-area-section08">
+            <div class="isu-area-section__title02">R&D 4</div>
+            <div class="isu-area-section__body02">
+              <div class="isu-area-section__info">
+                <dl>
+                  <dt>공급탱크(3ton)</dt>
+                  <dd>
+                    <span><strong style="color: #9a5af1">50</strong> pH</span>
+                    <p>EC 0.9 ㎲/cm</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="isu-area-section__info">
+                <dl>
+                  <dt>배액통</dt>
+                  <dd>
+                    <span><strong style="color: #9a5af1">50</strong> pH</span>
+                    <p>EC 0.9 ㎲/cm</p>
+                  </dd>
+                </dl>
+              </div>
+              <div class="isu-area-section__table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>온도</th>
+                      <td><strong style="color: #9a5af1">30</strong> °C</td>
+                    </tr>
+                    <tr>
+                      <th>습도</th>
+                      <td><strong style="color: #9a5af1">220</strong> %</td>
+                    </tr>
+                    <tr>
+                      <th>CO2</th>
+                      <td><strong style="color: #9a5af1">220</strong> ppm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
