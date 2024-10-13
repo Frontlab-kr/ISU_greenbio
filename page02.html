@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이수화학</title>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <!-- flatpickr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
+    <!-- js -->
+    <script src="./assets/js/common.js"></script>
+
+    <link rel="stylesheet" href="./assets/scss/common.css" />
+  </head>
+  <body>
+    <div class="isu">
+      <div id="header"></div>
+      <div class="isu-stage">
+        <div class="isu-area">
+          <div class="isu-list">
+            <div class="isu-list-item">
+              <div class="isu-list-item-head">
+                <h5>발아실</h5>
+                <div class="isu-list-item-head-temps">
+                  <p class="red">
+                    현재 온도<span><strong>32</strong>ºC</span>
+                  </p>
+                  <hr />
+                  <p class="blue">
+                    현재 습도<span><strong>40</strong>%</span>
+                  </p>
+                </div>
+              </div>
+              <div class="isu-list-item-contents"></div>
+            </div>
+            <div class="isu-list-item">
+              <div class="isu-list-item-head">
+                <h5>R&D 1</h5>
+                <div class="isu-list-item-head-temps">
+                  <p class="red">
+                    현재 온도<span><strong>32</strong>ºC</span>
+                  </p>
+                  <hr />
+                  <p class="blue">
+                    현재 습도<span><strong>40</strong>%</span>
+                  </p>
+                </div>
+              </div>
+              <div class="isu-list-item-contents"></div>
+            </div>
+            <div class="isu-list-item">
+              <div class="isu-list-item-head">
+                <h5>실내 육묘대</h5>
+                <div class="isu-list-item-head-temps">
+                  <p class="red">
+                    현재 온도<span><strong>32</strong>ºC</span>
+                  </p>
+                  <hr />
+                  <p class="blue">
+                    현재 습도<span><strong>40</strong>%</span>
+                  </p>
+                </div>
+              </div>
+              <div class="isu-list-item-contents"></div>
+            </div>
+            <div class="isu-list-item">
+              <div class="isu-list-item-head">
+                <h5>R&D 2</h5>
+                <div class="isu-list-item-head-temps">
+                  <p class="red">
+                    현재 온도<span><strong>32</strong>ºC</span>
+                  </p>
+                  <hr />
+                  <p class="blue">
+                    현재 습도<span><strong>40</strong>%</span>
+                  </p>
+                </div>
+              </div>
+              <div class="isu-list-item-contents"></div>
+            </div>
+            <div class="isu-list-item">
+              <div class="isu-list-item-head">
+                <h5>다단형 MGS</h5>
+                <div class="isu-list-item-head-temps">
+                  <p class="red">
+                    현재 온도<span><strong>32</strong>ºC</span>
+                  </p>
+                  <hr />
+                  <p class="blue">
+                    현재 습도<span><strong>40</strong>%</span>
+                  </p>
+                </div>
+              </div>
+              <div class="isu-list-item-contents"></div>
+            </div>
+            <div class="isu-list-item">
+              <div class="isu-list-item-head">
+                <h5>R&D 3</h5>
+                <div class="isu-list-item-head-temps">
+                  <p class="red">
+                    현재 온도<span><strong>32</strong>ºC</span>
+                  </p>
+                  <hr />
+                  <p class="blue">
+                    현재 습도<span><strong>40</strong>%</span>
+                  </p>
+                </div>
+              </div>
+              <div class="isu-list-item-contents"></div>
+            </div>
+            <img src="./assets/images/banner.png" alt="" />
+            <div class="isu-list-item">
+              <div class="isu-list-item-head">
+                <h5>R&D 4</h5>
+                <div class="isu-list-item-head-temps">
+                  <p class="red">
+                    현재 온도<span><strong>32</strong>ºC</span>
+                  </p>
+                  <hr />
+                  <p class="blue">
+                    현재 습도<span><strong>40</strong>%</span>
+                  </p>
+                </div>
+              </div>
+              <div class="isu-list-item-contents"></div>
+            </div>
+          </div>
+          <div class="isu-schedule">
+            <h3>작업 스케줄</h3>
+            <div class="isu-schedule-list">
+              <div class="isu-schedule-list-item blue">
+                <div class="isu-schedule-list-item__title">
+                  <strong>라인명</strong>
+                  <p>팀이름이 노출됩니다.</p>
+                </div>
+                <div class="isu-schedule-list-item__text">
+                  <ul>
+                    <li>작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.</li>
+                    <li>
+                      작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.작업
+                      내용이 노출됩니다. 최대 2줄까지 노출됩니다.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="isu-schedule-list-item teal">
+                <div class="isu-schedule-list-item__title">
+                  <strong>라인명</strong>
+                  <p>팀이름이 노출됩니다.</p>
+                </div>
+                <div class="isu-schedule-list-item__text">
+                  <ul>
+                    <li>작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.</li>
+                    <li>
+                      작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.작업
+                      내용이 노출됩니다. 최대 2줄까지 노출됩니다.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="isu-schedule-list-item teal">
+                <div class="isu-schedule-list-item__title">
+                  <strong>라인명</strong>
+                  <p>팀이름이 노출됩니다.</p>
+                </div>
+                <div class="isu-schedule-list-item__text">
+                  <ul>
+                    <li>작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.</li>
+                    <li>
+                      작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.작업
+                      내용이 노출됩니다. 최대 2줄까지 노출됩니다.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="isu-schedule-list-item purple">
+                <div class="isu-schedule-list-item__title">
+                  <strong>라인명</strong>
+                  <p>팀이름이 노출됩니다.</p>
+                </div>
+                <div class="isu-schedule-list-item__text">
+                  <ul>
+                    <li>작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.</li>
+                    <li>
+                      작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.작업
+                      내용이 노출됩니다. 최대 2줄까지 노출됩니다.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="isu-schedule-list-item lightblue">
+                <div class="isu-schedule-list-item__title">
+                  <strong>라인명</strong>
+                  <p>팀이름이 노출됩니다.</p>
+                </div>
+                <div class="isu-schedule-list-item__text">
+                  <ul>
+                    <li>작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.</li>
+                    <li>
+                      작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.작업
+                      내용이 노출됩니다. 최대 2줄까지 노출됩니다.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="isu-schedule-list-item lightblue">
+                <div class="isu-schedule-list-item__title">
+                  <strong>라인명</strong>
+                  <p>팀이름이 노출됩니다.</p>
+                </div>
+                <div class="isu-schedule-list-item__text">
+                  <ul>
+                    <li>작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.</li>
+                    <li>
+                      작업 내용이 노출됩니다. 최대 2줄까지 노출됩니다.작업
+                      내용이 노출됩니다. 최대 2줄까지 노출됩니다.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
