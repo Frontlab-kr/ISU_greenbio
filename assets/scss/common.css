@@ -13145,6 +13145,35 @@ textarea {
   background: url(../images/mgs-bg.png) no-repeat 50% 50%;
   background-size: cover;
 }
+.isu-mgs-bg ul {
+  margin: 51px 0 0 120px;
+  padding: 0;
+  list-style: none;
+}
+.isu-mgs-bg ul li {
+  display: none;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
+}
+.isu-mgs-bg ul li:first-child {
+  margin: 0;
+}
+.isu-mgs-bg-item02 {
+  margin-top: 41px !important;
+}
+.isu-mgs-bg-item03 {
+  margin-top: 29px !important;
+}
+.isu-mgs-bg-item04 {
+  margin-top: 32px !important;
+}
+.isu-mgs-bg-item05 {
+  margin-top: 34px !important;
+}
+.isu-mgs-bg-item06 {
+  margin-top: 30px !important;
+}
 .isu-mgs-item {
   position: absolute;
   top: 50%;
@@ -13160,11 +13189,82 @@ textarea {
   border: solid 3px #c9cde3;
   background-image: linear-gradient(to top, #fefefe, #f5f9fc);
 }
+.isu-mgs-item::before {
+  content: "";
+  display: none;
+  position: absolute;
+  animation: blink 1.4s infinite;
+}
 .isu-mgs-item.item01 {
-  margin: -1000px 0 0 -1400px;
+  margin: -960px 0 0 550px;
+}
+.isu-mgs-item.item01::before {
+  top: -10px;
+  right: -30px;
+  width: 1084px;
+  height: 712px;
+  background: url(../images/mgs-alert01.png) no-repeat 50% 50%;
+  z-index: 10;
+}
+.isu-mgs-item.item02 {
+  margin: -960px 0 0 -610px;
+}
+.isu-mgs-item.item02::before {
+  top: -10px;
+  right: -30px;
+  width: 1084px;
+  height: 814px;
+  background: url(../images/mgs-alert02.png) no-repeat 50% 50%;
+  z-index: 10;
+}
+.isu-mgs-item.item03 {
+  margin: -960px 0 0 -1790px;
+}
+.isu-mgs-item.item03::before {
+  top: -10px;
+  right: -30px;
+  width: 1084px;
+  height: 947px;
+  background: url(../images/mgs-alert03.png) no-repeat 50% 50%;
+  z-index: 10;
+}
+.isu-mgs-item.item04 {
+  margin: 480px 0 0 550px;
+}
+.isu-mgs-item.item04::before {
+  bottom: -46px;
+  right: -30px;
+  width: 1084px;
+  height: 996px;
+  background: url(../images/mgs-alert04.png) no-repeat 50% 50%;
+  z-index: 10;
+}
+.isu-mgs-item.item05 {
+  margin: 480px 0 0 -610px;
+}
+.isu-mgs-item.item05::before {
+  bottom: -46px;
+  right: -30px;
+  width: 1084px;
+  height: 835px;
+  background: url(../images/mgs-alert05.png) no-repeat 50% 50%;
+  z-index: 10;
+}
+.isu-mgs-item.item06 {
+  margin: 480px 0 0 -1790px;
+}
+.isu-mgs-item.item06::before {
+  bottom: -46px;
+  right: -30px;
+  width: 1084px;
+  height: 724px;
+  background: url(../images/mgs-alert06.png) no-repeat 50% 50%;
+  z-index: 10;
 }
 .isu-mgs-item h4, .isu-mgs-item .h4 {
-  margin: 43px 0 10px 0;
+  position: relative;
+  z-index: 20;
+  margin: 26px 0 10px 0;
   font-size: 60px;
   font-weight: 800;
   font-stretch: normal;
@@ -13181,6 +13281,8 @@ textarea {
   word-break: break-all;
 }
 .isu-mgs-item h5, .isu-mgs-item .h5 {
+  position: relative;
+  z-index: 20;
   margin: 0;
   font-size: 36px;
   font-weight: normal;
@@ -13208,7 +13310,9 @@ textarea {
   background: url(../images/mgs-icon02.png) no-repeat 50% 50%;
 }
 .isu-mgs-item-info {
-  margin: 46px 0 0 0;
+  position: relative;
+  z-index: 20;
+  margin: 34px 0 0 0;
 }
 .isu-mgs-item-info ul {
   margin: 0;
@@ -13252,6 +13356,9 @@ textarea {
   color: #3a65fb;
 }
 .isu-mgs-item-thumb {
+  position: relative;
+  z-index: 20;
+  min-width: 355px;
   width: 355px;
   height: 402px;
   border-radius: 12px;
@@ -13262,4 +13369,40 @@ textarea {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.isu-mgs--active01 .isu-mgs-bg-item01 {
+  display: block;
+}
+.isu-mgs--active01 .isu-mgs-item.item01::before {
+  display: block;
+}
+.isu-mgs--active02 .isu-mgs-bg-item02 {
+  display: block;
+}
+.isu-mgs--active02 .isu-mgs-item.item02::before {
+  display: block;
+}
+.isu-mgs--active03 .isu-mgs-bg-item03 {
+  display: block;
+}
+.isu-mgs--active03 .isu-mgs-item.item03::before {
+  display: block;
+}
+.isu-mgs--active04 .isu-mgs-bg-item04 {
+  display: block;
+}
+.isu-mgs--active04 .isu-mgs-item.item04::before {
+  display: block;
+}
+.isu-mgs--active05 .isu-mgs-bg-item05 {
+  display: block;
+}
+.isu-mgs--active05 .isu-mgs-item.item05::before {
+  display: block;
+}
+.isu-mgs--active06 .isu-mgs-bg-item06 {
+  display: block;
+}
+.isu-mgs--active06 .isu-mgs-item.item06::before {
+  display: block;
 }/*# sourceMappingURL=common.css.map */
