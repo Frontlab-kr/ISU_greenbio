@@ -2,7 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=3840px, initial-scale=1.0" />
     <title>이수화학</title>
 
     <!-- jquery -->
@@ -17,6 +17,11 @@
     <script src="./assets/js/common.js"></script>
 
     <link rel="stylesheet" href="./assets/scss/common.css" />
+
+    <!-- amCharts 라이브러리 로드 -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
   </head>
   <body>
     <div class="isu">
@@ -37,7 +42,9 @@
                   </p>
                 </div>
               </div>
-              <div class="isu-list-item-contents"></div>
+              <div class="isu-list-item-contents">
+                <div class="chartdiv" style="width: 100%; height: 500px"></div>
+              </div>
             </div>
             <div class="isu-list-item">
               <div class="isu-list-item-head">
@@ -52,7 +59,9 @@
                   </p>
                 </div>
               </div>
-              <div class="isu-list-item-contents"></div>
+              <div class="isu-list-item-contents">
+                <div class="chartdiv" style="width: 100%; height: 500px"></div>
+              </div>
             </div>
             <div class="isu-list-item">
               <div class="isu-list-item-head">
@@ -229,5 +238,74 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // amCharts 준비
+      am5.ready(function () {
+        // 모든 .chartdiv 요소 선택
+        let chartDivs = document.querySelectorAll('.chartdiv');
+
+        // 각각의 chartDiv에 대해 차트 생성
+        chartDivs.forEach(function (chartDiv, index) {
+          let root = am5.Root.new(chartDiv);
+
+          // 애니메이션 테마 사용
+          root.setThemes([am5themes_Animated.new(root)]);
+
+          // 차트 생성
+          let chart = root.container.children.push(
+            am5xy.XYChart.new(root, {
+              panX: true,
+              panY: true,
+              wheelX: 'panX',
+              wheelY: 'zoomX',
+              pinchZoomX: true,
+            })
+          );
+
+          // 데이터 준비
+          let data = [
+            { category: 'Red', value: Math.random() * 20 },
+            { category: 'Blue', value: Math.random() * 20 },
+            { category: 'Yellow', value: Math.random() * 20 },
+            { category: 'Green', value: Math.random() * 20 },
+            { category: 'Purple', value: Math.random() * 20 },
+            { category: 'Orange', value: Math.random() * 20 },
+          ];
+
+          // X축 (카테고리 축)
+          let xAxis = chart.xAxes.push(
+            am5xy.CategoryAxis.new(root, {
+              categoryField: 'category',
+              renderer: am5xy.AxisRendererX.new(root, {}),
+            })
+          );
+          xAxis.data.setAll(data);
+
+          // Y축 (값 축)
+          let yAxis = chart.yAxes.push(
+            am5xy.ValueAxis.new(root, {
+              renderer: am5xy.AxisRendererY.new(root, {}),
+            })
+          );
+
+          // 시리즈 생성
+          let series = chart.series.push(
+            am5xy.ColumnSeries.new(root, {
+              name: `Series ${index + 1}`, // 차트별 레이블을 구분
+              xAxis: xAxis,
+              yAxis: yAxis,
+              valueYField: 'value',
+              categoryXField: 'category',
+            })
+          );
+          series.data.setAll(data);
+
+          // 차트 애니메이션 효과
+          series.appear(1000);
+          chart.appear(1000, 100);
+        });
+      }); // am5.ready() 끝
+    </script>
   </body>
 </html>
