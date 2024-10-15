@@ -31,6 +31,11 @@
     opacity: 0.5;
   }
 }
+html,
+body {
+  // width: 3840px;
+  // height: 2160px;
+}
 .isu {
   width: 100vw;
   height: 100vh;
@@ -113,6 +118,7 @@
   &-stage {
     width: 100%;
     height: calc(100vh - 112px);
+    //height: 2048px;
   }
   &-area {
     display: flex;
@@ -714,6 +720,7 @@
       box-shadow: 0px 4px 6.4px 0.6px rgba(31, 36, 76, 0.1);
       border: solid 3px #a6abcc;
       background-image: linear-gradient(to top, #fefefe, #f5f9fc);
+      overflow: hidden;
       &-head {
         display: flex;
         align-items: center;
@@ -723,6 +730,7 @@
         padding: 0 34px;
         h5 {
           margin: 0;
+          font-family: Pretendard;
           font-size: 40px;
           font-weight: bold;
           font-stretch: normal;
@@ -730,13 +738,14 @@
           line-height: normal;
           letter-spacing: normal;
           text-align: left;
-          color: #131415;
+          color: #fff;
         }
         &-temps {
           display: flex;
           align-items: center;
+          height: 60px;
           padding: 11px 24px;
-          border-radius: 12px;
+          border-radius: 30px;
           border: solid 2px #e1e4f0;
           background-color: #f3f5f9;
           hr {
@@ -794,8 +803,29 @@
           }
         }
       }
+      &.teal & {
+        &-head {
+          background-image: linear-gradient(to left, #1395bf, #43c2d1);
+        }
+      }
+      &.purple & {
+        &-head {
+          background-image: linear-gradient(to left, #9d6ae1, #b987f4);
+        }
+      }
+      &.lightblue & {
+        &-head {
+          background-image: linear-gradient(to left, #2a94d1, #56b6f3);
+        }
+      }
+      &.blue & {
+        &-head {
+          background-image: linear-gradient(to left, #2175f2, #4a98f7);
+        }
+      }
+
       &-contents {
-        min-height: 334px;
+        height: 334px;
         // padding: 34px;
         // font-size: 32px;
         overflow: hidden;
@@ -820,7 +850,7 @@
       color: #131415;
     }
     &-list {
-      height: calc(100vh - 290px);
+      height: calc(100% - 178px);
       overflow: auto;
       padding: 0 60px 40px;
       &-item {
@@ -929,6 +959,7 @@
     &-bg {
       width: 2606px;
       height: 816px;
+      margin-left: 200px;
       background: url(../images/mgs-bg.png) no-repeat 50% 50%;
       background-size: cover;
       ul {
@@ -982,7 +1013,7 @@
         animation: blink 1.4s infinite;
       }
       &.item01 {
-        margin: -960px 0 0 550px;
+        margin: -960px 0 0 650px;
         &::before {
           top: -10px;
           right: -30px;
@@ -994,7 +1025,7 @@
         }
       }
       &.item02 {
-        margin: -960px 0 0 -610px;
+        margin: -960px 0 0 -510px;
         &::before {
           top: -10px;
           right: -30px;
@@ -1006,7 +1037,7 @@
         }
       }
       &.item03 {
-        margin: -960px 0 0 -1790px;
+        margin: -960px 0 0 -1690px;
         &::before {
           top: -10px;
           right: -30px;
@@ -1018,7 +1049,7 @@
         }
       }
       &.item04 {
-        margin: 480px 0 0 550px;
+        margin: 480px 0 0 650px;
         &::before {
           bottom: -46px;
           right: -30px;
@@ -1030,7 +1061,7 @@
         }
       }
       &.item05 {
-        margin: 480px 0 0 -610px;
+        margin: 480px 0 0 -510px;
         &::before {
           bottom: -46px;
           right: -30px;
@@ -1042,7 +1073,7 @@
         }
       }
       &.item06 {
-        margin: 480px 0 0 -1790px;
+        margin: 480px 0 0 -1690px;
         &::before {
           bottom: -46px;
           right: -30px;
