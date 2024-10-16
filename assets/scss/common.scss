@@ -915,7 +915,7 @@ body {
           margin-bottom: 30px;
           padding: 30px 26px 0 48px;
           strong {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
             font-stretch: normal;
             font-style: normal;
@@ -925,7 +925,7 @@ body {
           }
           p {
             margin: 10px 0 0 0;
-            font-size: 32px;
+            font-size: 34px;
             font-weight: bold;
             font-stretch: normal;
             font-style: normal;
@@ -940,7 +940,7 @@ body {
           ul {
             li {
               margin: 16px 0 0 0;
-              font-size: 28px;
+              font-size: 30px;
               font-weight: normal;
               font-stretch: normal;
               font-style: normal;
@@ -975,10 +975,11 @@ body {
         padding: 0;
         list-style: none;
         li {
-          display: none;
           align-items: flex-end;
           margin: 0;
           padding: 0;
+          opacity: 0;
+          transition: all 0.4s ease;
           &:first-child {
             margin: 0;
           }
@@ -1016,9 +1017,10 @@ body {
       background-image: linear-gradient(to top, #fefefe, #f5f9fc);
       &::before {
         content: '';
-        display: none;
+        opacity: 0;
         position: absolute;
-        animation: blink 1.4s infinite;
+        transition: all 0.4s ease;
+        //animation: blink 1.4s infinite;
       }
       &.item01 {
         margin: -960px 0 0 650px;
@@ -1057,12 +1059,12 @@ body {
         }
       }
       &.item04 {
-        margin: 480px 0 0 650px;
+        margin: 480px 0 0 -1690px;
         &::before {
           bottom: -46px;
           right: -30px;
           width: 1084px;
-          height: 996px;
+          height: 995px;
           background: url(../images/mgs-alert04.png) no-repeat 50% 50%;
           z-index: 10;
           //opacity: 0.5;
@@ -1081,7 +1083,7 @@ body {
         }
       }
       &.item06 {
-        margin: 480px 0 0 -1690px;
+        margin: 480px 0 0 650px;
         &::before {
           bottom: -46px;
           right: -30px;
@@ -1092,6 +1094,7 @@ body {
           //opacity: 0.5;
         }
       }
+
       h4 {
         position: relative;
         z-index: 20;
@@ -1195,84 +1198,84 @@ body {
     }
     &--active01 {
       .isu-mgs-bg-item01 {
-        display: block;
+        opacity: 1;
       }
     }
     &--active01 & {
       &-item {
         &.item01 {
           &::before {
-            display: block;
+            opacity: 1;
           }
         }
       }
     }
     &--active02 {
       .isu-mgs-bg-item02 {
-        display: block;
+        opacity: 1;
       }
     }
     &--active02 & {
       &-item {
         &.item02 {
           &::before {
-            display: block;
+            opacity: 1;
           }
         }
       }
     }
     &--active03 {
       .isu-mgs-bg-item03 {
-        display: block;
+        opacity: 1;
       }
     }
     &--active03 & {
       &-item {
         &.item03 {
           &::before {
-            display: block;
+            opacity: 1;
           }
         }
       }
     }
     &--active04 {
       .isu-mgs-bg-item04 {
-        display: block;
+        opacity: 1;
       }
     }
     &--active04 & {
       &-item {
         &.item04 {
           &::before {
-            display: block;
+            opacity: 1;
           }
         }
       }
     }
     &--active05 {
       .isu-mgs-bg-item05 {
-        display: block;
+        opacity: 1;
       }
     }
     &--active05 & {
       &-item {
         &.item05 {
           &::before {
-            display: block;
+            opacity: 1;
           }
         }
       }
     }
     &--active06 {
       .isu-mgs-bg-item06 {
-        display: block;
+        opacity: 1;
       }
     }
     &--active06 & {
       &-item {
         &.item06 {
           &::before {
-            display: block;
+            opacity: 1;
           }
         }
       }

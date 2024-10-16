@@ -17,15 +17,32 @@
     <script src="./assets/js/common.js"></script>
 
     <link rel="stylesheet" href="./assets/scss/common.css" />
+    <script>
+      $(document).ready(function () {
+        let currentIndex = 1; // 첫 번째 클래스부터 시작
+        let totalClasses = 6; // 클래스 개수
+
+        setInterval(function () {
+          // 모든 active 클래스를 제거
+          $('.isu-mgs').removeClass(function (index, className) {
+            return (className.match(/isu-mgs--active\d+/g) || []).join(' ');
+          });
+
+          // 현재 인덱스에 해당하는 클래스를 추가
+          $('.isu-mgs').addClass('isu-mgs--active0' + currentIndex);
+
+          // 인덱스를 증가시키고, 마지막 클래스 이후 다시 처음으로 돌아감
+          currentIndex = (currentIndex % totalClasses) + 1;
+        }, 2000); // 1초 간격으로 실행
+      });
+    </script>
   </head>
   <body>
     <div class="isu">
       <div id="header"></div>
       <div class="isu-stage">
         <div class="isu-area">
-          <div
-            class="isu-mgs isu-mgs--active01 isu-mgs--active02 isu-mgs--active03 isu-mgs--active04 isu-mgs--active05 isu-mgs--active06"
-          >
+          <div class="isu-mgs isu-mgs--active01">
             <div class="isu-mgs-bg">
               <ul>
                 <li class="isu-mgs-bg-item01">

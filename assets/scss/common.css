@@ -13116,7 +13116,7 @@ textarea {
   padding: 30px 26px 0 48px;
 }
 .isu-schedule-list-item__title strong {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -13126,7 +13126,7 @@ textarea {
 }
 .isu-schedule-list-item__title p {
   margin: 10px 0 0 0;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -13140,7 +13140,7 @@ textarea {
 }
 .isu-schedule-list-item__text ul li {
   margin: 16px 0 0 0;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -13173,10 +13173,11 @@ textarea {
   list-style: none;
 }
 .isu-mgs-bg ul li {
-  display: none;
   align-items: flex-end;
   margin: 0;
   padding: 0;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 .isu-mgs-bg ul li:first-child {
   margin: 0;
@@ -13213,9 +13214,9 @@ textarea {
 }
 .isu-mgs-item::before {
   content: "";
-  display: none;
+  opacity: 0;
   position: absolute;
-  animation: blink 1.4s infinite;
+  transition: all 0.4s ease;
 }
 .isu-mgs-item.item01 {
   margin: -960px 0 0 650px;
@@ -13251,13 +13252,13 @@ textarea {
   z-index: 10;
 }
 .isu-mgs-item.item04 {
-  margin: 480px 0 0 650px;
+  margin: 480px 0 0 -1690px;
 }
 .isu-mgs-item.item04::before {
   bottom: -46px;
   right: -30px;
   width: 1084px;
-  height: 996px;
+  height: 995px;
   background: url(../images/mgs-alert04.png) no-repeat 50% 50%;
   z-index: 10;
 }
@@ -13273,7 +13274,7 @@ textarea {
   z-index: 10;
 }
 .isu-mgs-item.item06 {
-  margin: 480px 0 0 -1690px;
+  margin: 480px 0 0 650px;
 }
 .isu-mgs-item.item06::before {
   bottom: -46px;
@@ -13393,38 +13394,38 @@ textarea {
      object-fit: cover;
 }
 .isu-mgs--active01 .isu-mgs-bg-item01 {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active01 .isu-mgs-item.item01::before {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active02 .isu-mgs-bg-item02 {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active02 .isu-mgs-item.item02::before {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active03 .isu-mgs-bg-item03 {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active03 .isu-mgs-item.item03::before {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active04 .isu-mgs-bg-item04 {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active04 .isu-mgs-item.item04::before {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active05 .isu-mgs-bg-item05 {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active05 .isu-mgs-item.item05::before {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active06 .isu-mgs-bg-item06 {
-  display: block;
+  opacity: 1;
 }
 .isu-mgs--active06 .isu-mgs-item.item06::before {
-  display: block;
+  opacity: 1;
 }/*# sourceMappingURL=common.css.map */
