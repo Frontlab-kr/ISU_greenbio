@@ -12676,7 +12676,7 @@ textarea {
   color: #444;
 }
 .isu-area-section__info {
-  min-width: 240px;
+  width: 100%;
   height: 281px;
 }
 .isu-area-section__info dl {
@@ -12699,41 +12699,37 @@ textarea {
 }
 .isu-area-section__info dl dd {
   display: flex;
+  align-items: center;
+}
+.isu-area-section__info dl dd p {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 195px;
+  gap: 16px;
+  width: 100%;
+  height: 170px;
   margin: 0;
 }
-.isu-area-section__info dl dd span {
-  font-size: 30px;
+.isu-area-section__info dl dd p span {
+  display: block;
+  font-size: 28px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #131313;
+  color: #515559;
 }
-.isu-area-section__info dl dd span strong {
-  font-size: 56px;
+.isu-area-section__info dl dd p strong {
+  font-size: 48px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-}
-.isu-area-section__info dl dd p {
-  margin: 20px 0 0 0;
-  font-size: 28px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #444;
 }
 .isu-area-section01 {
   position: absolute;
